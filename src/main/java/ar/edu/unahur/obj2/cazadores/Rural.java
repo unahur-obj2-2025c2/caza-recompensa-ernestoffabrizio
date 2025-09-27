@@ -7,7 +7,12 @@ public class Rural extends Cazador{
     public Rural(Integer experiencia) {
         super(experiencia);
     }
+    @Override
     public Boolean condicionEspecifica(Profugo unProfugo){
         return unProfugo.getEsNervioso();
+    }
+    @Override
+    public void intimidacionEspecifica(Profugo unProfugo){
+        unProfugo.volverseNervioso();
     }
 }

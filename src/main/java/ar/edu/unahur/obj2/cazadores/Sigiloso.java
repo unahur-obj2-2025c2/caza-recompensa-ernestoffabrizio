@@ -6,8 +6,12 @@ public class Sigiloso extends Cazador{
     public Sigiloso(Integer experiencia) {
         super(experiencia);
     }
-
+    @Override
     public Boolean condicionEspecifica(Profugo unProfugo){
         return unProfugo.getHabilidad() < 50;
+    }
+    @Override
+     public void intimidacionEspecifica(Profugo unProfugo){
+        unProfugo.reducirHabilidad();
     }
 }

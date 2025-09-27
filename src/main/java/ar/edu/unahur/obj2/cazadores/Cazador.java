@@ -15,4 +15,9 @@ public abstract class Cazador {
     //condicion especifica
     protected abstract Boolean condicionEspecifica(Profugo unProfugo);
     
+     public void intimidar(Profugo unProfugo){
+        unProfugo.disminuirInocencia();
+        intimidacionEspecifica(unProfugo);
+    }
+    public abstract void intimidacionEspecifica(Profugo unProfugo);
 }
